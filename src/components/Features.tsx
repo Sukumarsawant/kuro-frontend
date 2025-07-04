@@ -7,7 +7,7 @@ import {
   Zap,
   Brain,
   Terminal,
-  GitBranch,
+  Volume2,
   Code
 } from 'lucide-react';
 
@@ -29,19 +29,23 @@ const Features = () => {
       description: 'Complete development workflow automation'
     },
     {
-      icon: Shield,
-      title: 'Secure via GitHub OAuth',
-      description: 'Safe and secure authentication'
+      icon: Volume2,
+      title: '10 Voice Profiles',
+      description: 'Choose from 10 different voice personalities and accents'
     }
   ];
 
   const techStack = [
-    { name: 'React', icon: Code },
     { name: 'Python', icon: Terminal },
-    { name: 'Node.js', icon: Zap },
-    { name: 'GitHub API', icon: Github },
-    { name: 'OpenAI', icon: Brain }
+    { name: 'Gemini API', icon: Brain },
+    { name: 'React', icon: Code },
+    { name: 'ElevenLabs', icon: Volume2 },
+    { name: 'GitHub API', icon: Github }
   ];
+
+  const handleDownload = () => {
+    window.open('https://github.com/Sukumarsawant/Kuro-CLI-/archive/refs/tags/asset.zip', '_blank');
+  };
 
   return (
     <div className="py-20 bg-gradient-to-b from-gray-900 to-black">
@@ -84,12 +88,6 @@ const Features = () => {
                 );
               })}
             </div>
-            
-            <div className="text-center">
-              <p className="text-gray-400 flex items-center justify-center gap-2">
-                Made with <span className="text-red-500">♥</span> at <span className="text-purple-400">[Your Name]</span>
-              </p>
-            </div>
           </div>
         </div>
 
@@ -101,8 +99,12 @@ const Features = () => {
               Join developers who have already transformed their GitHub experience with voice commands
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-white text-gray-900 font-semibold rounded-xl hover:bg-gray-100 transition-all duration-200 transform hover:scale-105">
-                Try Live Demo
+              <button 
+                onClick={handleDownload}
+                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:scale-105 flex items-center justify-center gap-2"
+              >
+                <Terminal className="w-5 h-5" />
+                Download Kuro CLI
               </button>
               <button className="px-8 py-4 border border-gray-400 text-white font-semibold rounded-xl hover:bg-gray-800 transition-all duration-200 transform hover:scale-105 flex items-center justify-center gap-2">
                 <Github className="w-5 h-5" />

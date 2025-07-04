@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mic, Brain, Github, ArrowRight } from 'lucide-react';
+import { Mic, Brain, Github, Volume2 } from 'lucide-react';
 
 const HowItWorks = () => {
   return (
@@ -33,8 +33,8 @@ const HowItWorks = () => {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-2">Our AI processes it</h3>
-                  <p className="text-gray-400 mb-3">Python backend converts voice to intent</p>
+                  <h3 className="text-xl font-bold text-white mb-2">AI processes with Gemini</h3>
+                  <p className="text-gray-400 mb-3">Python backend with Gemini API converts voice to intent</p>
                   <div className="bg-gray-900 rounded-lg p-3 font-mono text-sm">
                     <div className="text-green-400">$ touch hello.py</div>
                     <div className="text-green-400">$ git add hello.py</div>
@@ -50,7 +50,7 @@ const HowItWorks = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-white mb-2">We update GitHub for you</h3>
-                  <p className="text-gray-400 mb-3">Auto commit, push, and PR creation</p>
+                  <p className="text-gray-400 mb-3">Auto commit, push, and PR creation with voice feedback</p>
                   <div className="bg-green-900/20 rounded-lg p-3 border border-green-500/30">
                     <div className="text-green-400 text-sm">✓ File created and committed</div>
                   </div>
@@ -59,51 +59,44 @@ const HowItWorks = () => {
             </div>
           </div>
 
-          {/* Right Side - Live Demo */}
+          {/* Right Side - Voice Profiles */}
           <div>
-            <h2 className="text-4xl font-bold text-white mb-12">Live Command Demo</h2>
+            <h2 className="text-4xl font-bold text-white mb-12">Voice Profiles</h2>
             
             <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700 p-6">
-              <div className="space-y-4 mb-6">
-                <div className="bg-gray-900 rounded-lg p-4 border-l-4 border-purple-500">
-                  <div className="flex items-center gap-2 text-purple-400 mb-2">
-                    <Mic className="w-4 h-4" />
-                    <span className="text-sm">You said:</span>
-                  </div>
-                  <p className="text-white">"Update README with intro"</p>
-                </div>
-                
-                <div className="bg-gray-900 rounded-lg p-4 border-l-4 border-green-500">
-                  <div className="flex items-center gap-2 text-green-400 mb-2">
-                    <Github className="w-4 h-4" />
-                    <span className="text-sm">Result:</span>
-                  </div>
-                  <p className="text-white">README.md updated and committed to GitHub</p>
-                </div>
+              <div className="flex items-center gap-2 mb-6">
+                <Volume2 className="w-5 h-5 text-purple-400" />
+                <span className="text-white font-semibold">Choose Your Voice Assistant</span>
               </div>
               
-              <div className="flex gap-3">
-                <button className="flex-1 px-4 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors flex items-center justify-center gap-2">
-                  <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-                  Start Recording
-                </button>
-                <button className="flex-1 px-4 py-3 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition-colors">
-                  Stop Recording
-                </button>
+              <div className="grid grid-cols-2 gap-3 mb-6">
+                {[
+                  'Professional Male',
+                  'Professional Female', 
+                  'Casual Male',
+                  'Casual Female',
+                  'British Accent',
+                  'Australian Accent',
+                  'Deep Voice',
+                  'Friendly Tone',
+                  'Tech Expert',
+                  'Creative Voice'
+                ].map((voice, index) => (
+                  <div key={index} className="bg-gray-900/50 rounded-lg p-3 border border-gray-600/30 hover:border-purple-500/50 transition-colors cursor-pointer">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                      <span className="text-white text-sm">{voice}</span>
+                    </div>
+                  </div>
+                ))}
               </div>
               
-              <div className="mt-6 pt-6 border-t border-gray-700">
-                <h4 className="text-white font-semibold mb-3">Updated Files</h4>
-                <div className="space-y-2">
-                  <div className="flex items-center gap-2 text-sm">
-                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                    <span className="text-gray-300">hello.py</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm">
-                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                    <span className="text-gray-300">README.md</span>
-                  </div>
+              <div className="bg-purple-900/20 rounded-lg p-4 border border-purple-500/30">
+                <div className="flex items-center gap-2 text-purple-400 mb-2">
+                  <Mic className="w-4 h-4" />
+                  <span className="text-sm">Powered by ElevenLabs</span>
                 </div>
+                <p className="text-white text-sm">High-quality voice synthesis with natural intonation and emotion</p>
               </div>
             </div>
           </div>

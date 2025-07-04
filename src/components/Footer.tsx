@@ -1,5 +1,5 @@
 import React from 'react';
-import { Terminal, Github, Twitter, Linkedin, Heart } from 'lucide-react';
+import { Terminal, Github, Twitter, Linkedin } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -16,7 +16,7 @@ const Footer = () => {
           
           {/* Social Links */}
           <div className="flex items-center gap-6">
-            <a href="#" className="text-gray-400 hover:text-white transition-colors">
+            <a href="https://github.com/Sukumarsawant/Kuro-CLI-" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
               <Github className="w-5 h-5" />
             </a>
             <a href="#" className="text-gray-400 hover:text-white transition-colors">
@@ -29,8 +29,8 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p className="text-gray-400 flex items-center justify-center gap-2">
-            Made with <Heart className="w-4 h-4 text-red-500" /> at <span className="text-purple-400">[Your Name]</span>
+          <p className="text-gray-400">
+            © 2024 Kuro CLI. All rights reserved.
           </p>
         </div>
       </div>
