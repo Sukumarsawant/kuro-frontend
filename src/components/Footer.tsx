@@ -19,10 +19,10 @@ const Footer = () => {
             <a href="https://github.com/Sukumarsawant/Kuro-CLI-" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
               <Github className="w-5 h-5" />
             </a>
-            <a href="#" className="text-gray-400 hover:text-white transition-colors">
+            <a href="https://x.com/18yearodd" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
               <Twitter className="w-5 h-5" />
             </a>
-            <a href="#" className="text-gray-400 hover:text-white transition-colors">
+            <a href="https://www.linkedin.com/in/sukumar-sawant/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
               <Linkedin className="w-5 h-5" />
             </a>
           </div>
@@ -30,7 +30,7 @@ const Footer = () => {
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-            © 2024 Kuro CLI. All rights reserved.
+            © 2024 Kuro CLI. Created by <a href="https://www.linkedin.com/in/sukumar-sawant/" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 transition-colors">Sukumar Sawant</a>
           </p>
         </div>
       </div>
