@@ -3,7 +3,7 @@ import { Terminal, Github, Download, ArrowRight, Volume2 } from 'lucide-react';
 
 const Hero = () => {
   const handleDownload = () => {
-    window.open('https://github.com/Sukumarsawant/kuro-frontend/releases/download/asset/Kuro.zip', '_blank');
+    window.open('https://github.com/Sukumarsawant/Kuro-CLI-/releases/download/asset/Kuro.zip', '_blank');
   };
 
   const handleGitHub = () => {
