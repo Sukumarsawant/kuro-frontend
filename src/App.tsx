@@ -1,18 +1,20 @@
-import React from 'react'
+import React from 'react';
+import Hero from './components/Hero';
+import ProblemSolution from './components/ProblemSolution';
+import HowItWorks from './components/HowItWorks';
+import Features from './components/Features';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold text-center mb-8">
-          Kuro - Voice-Activated CLI Tool
-        </h1>
-        <p className="text-xl text-center text-gray-300">
-          Transform your voice into powerful CLI commands
-        </p>
-      </div>
+    <div className="min-h-screen">
+      <Hero />
+      <ProblemSolution />
+      <HowItWorks />
+      <Features />
+      <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
